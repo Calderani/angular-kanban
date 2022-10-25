@@ -1,0 +1,8 @@
+@import 'src/assets/scss/global.scss';
+
+#home {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  width: 100%;
+  padding: 20px;
+}
