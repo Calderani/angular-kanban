@@ -6,11 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+
+  private taskModal: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
 
+  isModalVisible() {
+    return this.taskModal
+  }
+
   openModal() {
-    console.log("oi")
+    const open: boolean = true
+    this.taskModal = open
+  }
+
+  closeModal() {
+    const close: boolean = false
+    this.taskModal = close
   }
 }

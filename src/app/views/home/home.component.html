@@ -4,3 +4,4 @@
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
 </div>
+<app-modal *ngIf="isModalVisible()" (sendCloseModal)="closeModal()"></app-modal>
