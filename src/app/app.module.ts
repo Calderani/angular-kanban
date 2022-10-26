@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { KanbanTrackComponent } from './shared/kanban-track/kanban-track.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     KanbanTrackComponent,
-    ModalComponent
+    ModalComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
