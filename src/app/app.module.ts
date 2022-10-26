@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { KanbanTrackComponent } from './shared/kanban-track/kanban-track.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    KanbanTrackComponent
+    KanbanTrackComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
