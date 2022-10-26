@@ -1,0 +1,45 @@
+@mixin set-color-hover($color) {
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      color: $color;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $color;
+  }
+}
+
+/* Buttons */
+.btn {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  @extend .font-montserrat;
+  padding: 0.5rem 1.5rem;
+  color: $white !important;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-1 !important;
+  box-shadow: none !important;
+
+  &.btn-track {
+    color: $black !important;
+    border: 1px gray solid;
+    border-style: dashed;
+    background-color: transparent !important;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @include set-color-hover($white);
+}
