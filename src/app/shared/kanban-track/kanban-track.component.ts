@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-kanban-track',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KanbanTrackComponent implements OnInit {
 
+  @Output() public sendOpenTaskModal = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openTaskModal() {
+    this.sendOpenTaskModal.emit()
   }
 
 }
