@@ -1,7 +1,9 @@
 @mixin set-color-hover($color) {
+
   &,
   &:active,
   &.active {
+
     &:focus,
     &.focus {
       color: $color;
@@ -35,6 +37,12 @@
     border: 1px gray solid;
     border-style: dashed;
     background-color: transparent !important;
+
+    &:hover {
+      color: rgb(133, 133, 133) !important;
+      border: 1px gray solid;
+      border-style: dashed;
+    }
   }
 
   &:disabled {
