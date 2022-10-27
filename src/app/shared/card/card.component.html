@@ -1,13 +1,13 @@
 <div id="card">
   <div class="card-header">
-    <!-- <slot name="header"></slot> -->
+    <ng-content select="[header]"></ng-content>
   </div>
 
   <div class="card-body">
-    <!-- <slot name="body"></slot> -->
+    <ng-content select="[body]"></ng-content>
   </div>
 
   <div class="card-footer">
-    <!-- <slot name="footer"></slot> -->
+    <ng-content select="[footer]"></ng-content>
   </div>
 </div>
