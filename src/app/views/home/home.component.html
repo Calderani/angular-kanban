@@ -1,5 +1,9 @@
 <div id="home">
-  <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
+  <app-kanban-track (sendOpenTaskModal)="openModal()">
+    <div track>
+      <app-kanban-task-card  (sendDragStart)="startCardDrag()"></app-kanban-task-card>
+    </div>
+  </app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>

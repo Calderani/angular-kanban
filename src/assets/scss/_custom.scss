@@ -15,18 +15,24 @@
 
 .card {
   @extend .border-0;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
 }
 
 .card-header,
-.card-body {
+.card-body,
+.card-footer {
   padding: 0;
   border: none;
   background: transparent;
 }
 
+.card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.050);;
+}
+
 @media (min-width: 1200px) {
+
   .container,
   .container-sm,
   .container-md,
@@ -100,7 +106,7 @@
   @extend .d-flex;
   @extend .justify-content-between;
 
-  > button {
+  >button {
     @extend .btn;
   }
 }
@@ -143,7 +149,7 @@
     }
   }
 
-  input:checked + label:after {
+  input:checked+label:after {
     content: '';
     display: block;
     position: absolute;
@@ -157,7 +163,7 @@
     transform: rotate(45deg);
   }
 
-  input:checked + label:before {
+  input:checked+label:before {
     border-color: $primary-2;
     background-color: $primary-2;
   }
@@ -208,12 +214,12 @@
     }
   }
 
-  input:checked + label:after {
+  input:checked+label:after {
     background-color: $primary-2;
     left: calc(100% - 15px);
   }
 
-  input:checked + label:before {
+  input:checked+label:before {
     border-color: #{$primary-2}66;
     background-color: #{$primary-2}66;
   }

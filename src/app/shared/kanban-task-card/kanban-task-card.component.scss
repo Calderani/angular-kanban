@@ -1,0 +1,37 @@
+@import 'src/assets/scss/global.scss';
+#kanban-task-card {
+  min-width: 300px;
+  margin: 10px;
+  padding: 5px;
+
+  .header {
+    p {
+      color: #898989;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0px 0px 0px 0px;
+    }
+
+    h5 {
+      font-size: 19px;
+    }
+  }
+
+  .footer {
+    @extend .d-flex;
+    div {
+      @extend .d-flex;
+      @extend .flex-row;
+      margin-top: 10px;
+      padding-right: 20px;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

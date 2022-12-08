@@ -26,4 +26,8 @@ export class HomeComponent implements OnInit {
     const close: boolean = false
     this.taskModal = close
   }
+
+  startCardDrag() {
+    console.log()
+  }
 }
