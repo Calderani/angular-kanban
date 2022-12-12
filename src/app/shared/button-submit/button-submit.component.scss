@@ -1,0 +1,13 @@
+@import 'src/assets/scss/global.scss';
+
+button {
+  @extend .btn;
+  width: 100%;
+
+  >div {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    border-width: 0.15em !important;
+  }
+}
