@@ -1,8 +1,43 @@
 <div id="home">
+  <app-kanban-track (sendOpenTaskModal)="openModal()">
+    <div track>
+      <app-kanban-task-card
+        (sendDragStart)="startCardDrag()"
+      ></app-kanban-task-card>
+    </div>
+  </app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
   <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
-  <app-kanban-track (sendOpenTaskModal)="openModal()"></app-kanban-track>
+
+  <app-modal *ngIf="isModalVisible()" (sendCloseModal)="closeModal()">
+    <div class="content-modal" body>
+      <form [formGroup]="taskForm" (ngSubmit)="handleSubmit()">
+        <div class="form">
+          <div>
+            <label for="taskTitle">Título</label>
+            <input type="text" formGroupName="taskTitle" />
+          </div>
+          <div>
+            <label for="taskDescription">Descrição</label>
+            <textarea
+              type="text"
+              formGroupName="taskDescription"
+              rows="4"
+            ></textarea>
+          </div>
+        </div>
+        <div class="control-buttons">
+          <app-button-submit
+            id="btnSubmitTask"
+            type="button"
+            title="Confirmar"
+            [isLoad]="isButtonLoad"
+          >
+            <div button>Confirmar</div>
+          </app-button-submit>
+        </div>
+      </form>
+    </div>
+  </app-modal>
 </div>
-<app-modal *ngIf="isModalVisible()" (sendCloseModal)="closeModal()">
-</app-modal>

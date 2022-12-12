@@ -5,4 +5,41 @@
   @extend .justify-content-around;
   width: 100%;
   padding: 20px;
+
+  .content-modal {
+    width: 738px;
+    padding: 10px;
+  }
+
+  form {
+    .form {
+      >div {
+        @extend .form-group;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        label {
+          color: $black;
+        }
+
+        input,
+        select,
+        textarea {
+          @extend .form-control;
+        }
+      }
+    }
+
+    .control-buttons {
+      @extend .d-flex;
+      @extend .justify-content-end;
+      @extend .align-items-center;
+      width: 100%;
+      padding-top: 20px;
+    }
+  }
+
+
 }
