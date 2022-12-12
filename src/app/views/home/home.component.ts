@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; 
+import { FormBuilder, FormGroup } from '@angular/forms'
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   private taskModal: boolean = false;
+  public isButtonLoad: boolean = false;
 
-  constructor() {}
+  public taskForm: FormGroup = this.formBuilder.group({
+    taskTitle: [''],
+    taskDescription: ['']
+  })
+
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {}
 
@@ -29,5 +36,9 @@ export class HomeComponent implements OnInit {
 
   startCardDrag() {
     console.log()
+  }
+
+  handleSubmit() {
+    this.isButtonLoad = true
   }
 }
